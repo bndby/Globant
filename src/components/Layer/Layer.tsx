@@ -1,10 +1,20 @@
-import React from 'react';
-import {KeyboardAvoidingView, Platform, StatusBar, View} from 'react-native';
+import React, {PropsWithChildren} from 'react';
+import {
+  KeyboardAvoidingView,
+  Platform,
+  StatusBar,
+  StyleProp,
+  View,
+  ViewStyle,
+} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {IOS_BEHAVIOR} from '../../consts/keyboard';
 import {IOS} from '../../consts/platforms';
 import {styles} from './Layer.style';
-import {LayerProps} from './Layer.types';
+
+type LayerProps = PropsWithChildren<{
+  style?: StyleProp<ViewStyle>;
+}>;
 
 export const Layer = ({children, style}: LayerProps) => {
   return (
