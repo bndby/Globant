@@ -3,15 +3,15 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for components/Layer/Layer.tsx</title>
+    <title>Code coverage report for consts/storage.ts</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="../../prettify.css" />
-    <link rel="stylesheet" href="../../base.css" />
-    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.png" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style type='text/css'>
         .coverage-summary .sorter {
-            background-image: url(../../sort-arrow-sprite.png);
+            background-image: url(../sort-arrow-sprite.png);
         }
     </style>
 </head>
@@ -19,13 +19,13 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">components/Layer</a> Layer.tsx</h1>
+        <h1><a href="../index.html">All files</a> / <a href="index.html">consts</a> storage.ts</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>12/12</span>
             </div>
         
             
@@ -39,14 +39,14 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/1</span>
+                <span class='fraction'>0/0</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>12/12</span>
             </div>
         
             
@@ -94,7 +94,15 @@
 <a name='L29'></a><a href='#L29'>29</a>
 <a name='L30'></a><a href='#L30'>30</a>
 <a name='L31'></a><a href='#L31'>31</a>
-<a name='L32'></a><a href='#L32'>32</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -108,12 +116,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -122,40 +125,61 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, {PropsWithChildren} from 'react';
-import {
-  KeyboardAvoidingView,
-  Platform,
-  StatusBar,
-  StyleProp,
-  View,
-  ViewStyle,
-} from 'react-native';
-import {SafeAreaView} from 'react-native-safe-area-context';
-import {IOS_BEHAVIOR} from '../../consts/keyboard';
-import {IOS} from '../../consts/platforms';
-import {styles} from './Layer.style';
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">export const PickedType = {
+  Image: 'image',
+  Sheet: 'sheet',
+  None: 'none',
+} as const;
 &nbsp;
-type LayerProps = PropsWithChildren&lt;{
-  style?: StyleProp&lt;ViewStyle&gt;;
-}&gt;;
-&nbsp;
-export const Layer = ({children, style}: LayerProps) =&gt; {
-  return (
-    &lt;View style={[styles.layout, style]}&gt;
-      &lt;StatusBar /&gt;
-      &lt;KeyboardAvoidingView
-        behavior={IOS_BEHAVIOR}
-        enabled={Platform.OS === IOS}
-        style={styles.keyboardAvoidingView}&gt;
-        &lt;SafeAreaView style={styles.content}&gt;{children}&lt;/SafeAreaView&gt;
-      &lt;/KeyboardAvoidingView&gt;
-    &lt;/View&gt;
-  );
+export type GlobantImage = {
+  id: number;
+  data: string;
+  name: string;
+  width: number;
+  height: number;
 };
+&nbsp;
+export const STORAGE_IMAGES = 'globant_images';
+&nbsp;
+export type GlobantSheet = {
+  id: number;
+  data: string;
+  name: string;
+  total: number;
+};
+&nbsp;
+export const STORAGE_SHEETS = 'globant_sheets';
+&nbsp;
+export const IMAGE_MIMETYPES = ['image/jpeg', 'image/png', 'image/jpg'];
+export const SHEET_MIMETYPES = ['text/csv', 'text/comma-separated-values'];
+&nbsp;
+export const FILE_PREFIX = 'file:///';
+export const FILE_WRONG_PREFIX = 'file:/';
+&nbsp;
+export const EMPTY_STORAGE_VALUE = '[]';
+&nbsp;
+export const IMAGE_ENCODING = 'base64';
+export const SHEET_ENCODING = 'utf8';
+&nbsp;
+export const SHEET_HEADER = 'Total';
+&nbsp;
+export const IMAGE_PREFIX = 'data:image/png;base64,';
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -165,14 +189,14 @@ export const Layer = ({children, style}: LayerProps) =&gt; {
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
                 at 2022-08-11T20:56:20.083Z
             </div>
-        <script src="../../prettify.js"></script>
+        <script src="../prettify.js"></script>
         <script>
             window.onload = function () {
                 prettyPrint();
             };
         </script>
-        <script src="../../sorter.js"></script>
-        <script src="../../block-navigation.js"></script>
+        <script src="../sorter.js"></script>
+        <script src="../block-navigation.js"></script>
     </body>
 </html>
     
