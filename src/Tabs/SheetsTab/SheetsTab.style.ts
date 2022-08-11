@@ -1,7 +1,7 @@
 import {StyleSheet} from 'react-native';
 
 export const styles = StyleSheet.create({
-  heading: {marginBottom: 10, flexDirection: 'row'},
+  heading: {marginTop: 10, flexDirection: 'row'},
   headingTitle: {flex: 2, fontWeight: 'bold'},
   headingValue: {flex: 1, fontWeight: 'bold'},
   item: {
