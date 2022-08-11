@@ -7,14 +7,18 @@ Create a web app using react that allows the user to upload PNG files and CSV fi
 There is no need for a backend, all data can make use of the local storage.
 
 `/home` (where is possible to upload files)
-: Upload button
+
+Upload button
 
 `/images` (list of png files)
-: Gallery
 
-`/sheets` (list of csv files) 
-: On this list it should display the filename, and the total amount column 1 (Total)
-: When uploading csv the only format acceptable is, using line 1 as header (Total), and the rest as data, on the very first column. I.e.
+Gallery
+
+`/sheets` (list of csv files)
+
+On this list it should display the filename, and the total amount column 1 (Total)
+
+When uploading csv the only format acceptable is, using line 1 as header (Total), and the rest as data, on the very first column. I.e.
 
 ```csv
 Total 
