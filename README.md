@@ -62,6 +62,8 @@ Coverage:
 yarn test:coverage
 ```
 
+e2e testing unavailable, because Dexon not supported on Windows :(
+
 ## Screen shots
 
 ![Home tab](screenshots/add.png)
