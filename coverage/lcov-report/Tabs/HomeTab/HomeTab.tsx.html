@@ -258,13 +258,8 @@
 <a name='L193'></a><a href='#L193'>193</a>
 <a name='L194'></a><a href='#L194'>194</a>
 <a name='L195'></a><a href='#L195'>195</a>
-<a name='L196'></a><a href='#L196'>196</a>
-<a name='L197'></a><a href='#L197'>197</a>
-<a name='L198'></a><a href='#L198'>198</a>
-<a name='L199'></a><a href='#L199'>199</a>
-<a name='L200'></a><a href='#L200'>200</a>
-<a name='L201'></a><a href='#L201'>201</a>
-<a name='L202'></a><a href='#L202'>202</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L196'></a><a href='#L196'>196</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -372,8 +367,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -397,17 +390,16 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -421,10 +413,6 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -487,6 +475,7 @@ import {
   STORAGE_SHEETS,
   PickedType,
   IMAGE_PREFIX,
+  PICKER_PROPS,
 } from '../../consts/storage';
 import {getCSVDelimiter} from '../../utils/csvDelimiter';
 import {ValueOf} from '../../utils/valueof';
@@ -521,7 +510,7 @@ export const HomeTab = () =&gt; {
 <span class="cstat-no" title="statement not covered" >      try {</span>
 <span class="cstat-no" title="statement not covered" >        setStateMessage('Start reading image...');</span>
         const response = <span class="cstat-no" title="statement not covered" >await RNFS.readFile(path, IMAGE_ENCODING);</span>
-<span class="cstat-no" title="statement not covered" >        setFileData(response); </span>//set the value of response to the fileData Hook.
+<span class="cstat-no" title="statement not covered" >        setFileData(response);</span>
         const {width, height} = <span class="cstat-no" title="statement not covered" >await getImageSize(path);</span>
 <span class="cstat-no" title="statement not covered" >        setImageSize({width, height});</span>
 <span class="cstat-no" title="statement not covered" >        setImages(</span>
@@ -567,17 +556,15 @@ export const HomeTab = () =&gt; {
 &nbsp;
 <span class="cstat-no" title="statement not covered" >        setSheetTotal(total);</span>
 &nbsp;
-        const newSheet = <span class="cstat-no" title="statement not covered" >{</span>
-          id: Date.now(),
-          data: response,
-          name: path.split('/').pop() || '',
-          total,
-        };
-&nbsp;
 <span class="cstat-no" title="statement not covered" >        setSheets(</span>
           JSON.stringify([
             ...JSON.parse(sheets || EMPTY_STORAGE_VALUE),
-            newSheet,
+            {
+              id: Date.now(),
+              data: response,
+              name: path.split('/').pop() || '',
+              total,
+            },
           ]),
         );
 <span class="cstat-no" title="statement not covered" >        setStateMessage('Sheet added to store.');</span>
@@ -598,17 +585,16 @@ export const HomeTab = () =&gt; {
 &nbsp;
 <span class="cstat-no" title="statement not covered" >    setStateMessage('Start processing...');</span>
 &nbsp;
+    const docUri =
+<span class="cstat-no" title="statement not covered" >      FILE_PREFIX + pickedDoc.fileCopyUri.replace(FILE_WRONG_PREFIX, '');</span>
+&nbsp;
 <span class="cstat-no" title="statement not covered" >    if (IMAGE_MIMETYPES.includes(String(pickedDoc.type))) {</span>
-<span class="cstat-no" title="statement not covered" >      readImageFile(</span>
-        FILE_PREFIX + pickedDoc.fileCopyUri.replace(FILE_WRONG_PREFIX, ''),
-      );
+<span class="cstat-no" title="statement not covered" >      readImageFile(docUri);</span>
 <span class="cstat-no" title="statement not covered" >      setPickedType(PickedType.Image);</span>
     }
 &nbsp;
 <span class="cstat-no" title="statement not covered" >    if (SHEET_MIMETYPES.includes(String(pickedDoc.type))) {</span>
-<span class="cstat-no" title="statement not covered" >      readSheetFile(</span>
-        FILE_PREFIX + pickedDoc.fileCopyUri.replace(FILE_WRONG_PREFIX, ''),
-      );
+<span class="cstat-no" title="statement not covered" >      readSheetFile(docUri);</span>
 <span class="cstat-no" title="statement not covered" >      setPickedType(PickedType.Sheet);</span>
     }
 &nbsp;
@@ -621,11 +607,7 @@ export const HomeTab = () =&gt; {
   const handlePick = useCallback(async () =&gt; {
     try {
       setStateMessage('Picking document...');
-      const pickerResult = await DocumentPicker.pickSingle({
-        presentationStyle: 'fullScreen',
-        copyTo: 'cachesDirectory',
-        type: [...IMAGE_MIMETYPES, ...SHEET_MIMETYPES],
-      });
+      const pickerResult = await DocumentPicker.pickSingle(PICKER_PROPS);
       setPickedDoc(pickerResult);
       setStateMessage('Document picked.');
     } catch (err) {
@@ -673,7 +655,7 @@ export const HomeTab = () =&gt; {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2022-08-11T20:56:20.083Z
+                at 2022-08-12T09:20:13.471Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

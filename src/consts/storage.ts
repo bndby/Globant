@@ -1,3 +1,6 @@
+import {DocumentPickerOptions} from 'react-native-document-picker';
+import {SupportedPlatforms} from 'react-native-document-picker/lib/typescript/fileTypes';
+
 export const PickedType = {
   Image: 'image',
   Sheet: 'sheet',
@@ -25,6 +28,12 @@ export const STORAGE_SHEETS = 'globant_sheets';
 
 export const IMAGE_MIMETYPES = ['image/jpeg', 'image/png', 'image/jpg'];
 export const SHEET_MIMETYPES = ['text/csv', 'text/comma-separated-values'];
+
+export const PICKER_PROPS: DocumentPickerOptions<SupportedPlatforms> = {
+  presentationStyle: 'fullScreen',
+  copyTo: 'cachesDirectory',
+  type: [...IMAGE_MIMETYPES, ...SHEET_MIMETYPES],
+};
 
 export const FILE_PREFIX = 'file:///';
 export const FILE_WRONG_PREFIX = 'file:/';

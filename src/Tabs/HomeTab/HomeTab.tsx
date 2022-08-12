@@ -20,6 +20,7 @@ import {
   STORAGE_SHEETS,
   PickedType,
   IMAGE_PREFIX,
+  PICKER_PROPS,
 } from '../../consts/storage';
 import {getCSVDelimiter} from '../../utils/csvDelimiter';
 import {ValueOf} from '../../utils/valueof';
@@ -54,7 +55,7 @@ export const HomeTab = () => {
       try {
         setStateMessage('Start reading image...');
         const response = await RNFS.readFile(path, IMAGE_ENCODING);
-        setFileData(response); //set the value of response to the fileData Hook.
+        setFileData(response);
         const {width, height} = await getImageSize(path);
         setImageSize({width, height});
         setImages(
@@ -100,17 +101,15 @@ export const HomeTab = () => {
 
         setSheetTotal(total);
 
-        const newSheet = {
-          id: Date.now(),
-          data: response,
-          name: path.split('/').pop() || '',
-          total,
-        };
-
         setSheets(
           JSON.stringify([
             ...JSON.parse(sheets || EMPTY_STORAGE_VALUE),
-            newSheet,
+            {
+              id: Date.now(),
+              data: response,
+              name: path.split('/').pop() || '',
+              total,
+            },
           ]),
         );
         setStateMessage('Sheet added to store.');
@@ -131,17 +130,16 @@ export const HomeTab = () => {
 
     setStateMessage('Start processing...');
 
+    const docUri =
+      FILE_PREFIX + pickedDoc.fileCopyUri.replace(FILE_WRONG_PREFIX, '');
+
     if (IMAGE_MIMETYPES.includes(String(pickedDoc.type))) {
-      readImageFile(
-        FILE_PREFIX + pickedDoc.fileCopyUri.replace(FILE_WRONG_PREFIX, ''),
-      );
+      readImageFile(docUri);
       setPickedType(PickedType.Image);
     }
 
     if (SHEET_MIMETYPES.includes(String(pickedDoc.type))) {
-      readSheetFile(
-        FILE_PREFIX + pickedDoc.fileCopyUri.replace(FILE_WRONG_PREFIX, ''),
-      );
+      readSheetFile(docUri);
       setPickedType(PickedType.Sheet);
     }
 
@@ -154,11 +152,7 @@ export const HomeTab = () => {
   const handlePick = useCallback(async () => {
     try {
       setStateMessage('Picking document...');
-      const pickerResult = await DocumentPicker.pickSingle({
-        presentationStyle: 'fullScreen',
-        copyTo: 'cachesDirectory',
-        type: [...IMAGE_MIMETYPES, ...SHEET_MIMETYPES],
-      });
+      const pickerResult = await DocumentPicker.pickSingle(PICKER_PROPS);
       setPickedDoc(pickerResult);
       setStateMessage('Document picked.');
     } catch (err) {

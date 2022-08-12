@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1660251380128" clover="3.2.0">
-  <project timestamp="1660251380129" name="All files">
-    <metrics statements="107" coveredstatements="65" conditionals="32" coveredconditionals="10" methods="21" coveredmethods="10" elements="160" coveredelements="85" complexity="0" loc="107" ncloc="107" packages="6" files="13" classes="13"/>
+<coverage generated="1660296013576" clover="3.2.0">
+  <project timestamp="1660296013576" name="All files">
+    <metrics statements="113" coveredstatements="75" conditionals="32" coveredconditionals="10" methods="23" coveredmethods="16" elements="168" coveredelements="101" complexity="0" loc="113" ncloc="113" packages="8" files="16" classes="16"/>
     <package name="Tabs.HomeTab">
       <metrics statements="56" coveredstatements="22" conditionals="24" coveredconditionals="3" methods="7" coveredmethods="3"/>
       <file name="HomeTab.style.ts" path="D:\source\Globant\src\Tabs\HomeTab\HomeTab.style.ts">
@@ -10,97 +10,103 @@
       </file>
       <file name="HomeTab.tsx" path="D:\source\Globant\src\Tabs\HomeTab\HomeTab.tsx">
         <metrics statements="55" coveredstatements="21" conditionals="24" coveredconditionals="3" methods="7" coveredmethods="3"/>
-        <line num="28" count="1" type="stmt"/>
-        <line num="29" count="4" type="stmt"/>
-        <line num="32" count="4" type="stmt"/>
-        <line num="35" count="4" type="stmt"/>
-        <line num="37" count="4" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="30" count="4" type="stmt"/>
+        <line num="33" count="4" type="stmt"/>
+        <line num="36" count="4" type="stmt"/>
         <line num="38" count="4" type="stmt"/>
-        <line num="40" count="4" type="stmt"/>
-        <line num="45" count="4" type="stmt"/>
+        <line num="39" count="4" type="stmt"/>
+        <line num="41" count="4" type="stmt"/>
         <line num="46" count="4" type="stmt"/>
-        <line num="52" count="4" type="stmt"/>
-        <line num="54" count="0" type="stmt"/>
+        <line num="47" count="4" type="stmt"/>
+        <line num="53" count="4" type="stmt"/>
         <line num="55" count="0" type="stmt"/>
         <line num="56" count="0" type="stmt"/>
         <line num="57" count="0" type="stmt"/>
         <line num="58" count="0" type="stmt"/>
         <line num="59" count="0" type="stmt"/>
         <line num="60" count="0" type="stmt"/>
-        <line num="72" count="0" type="stmt"/>
-        <line num="74" count="0" type="stmt"/>
-        <line num="84" count="4" type="stmt"/>
-        <line num="86" count="0" type="stmt"/>
+        <line num="61" count="0" type="stmt"/>
+        <line num="73" count="0" type="stmt"/>
+        <line num="75" count="0" type="stmt"/>
+        <line num="85" count="4" type="stmt"/>
         <line num="87" count="0" type="stmt"/>
         <line num="88" count="0" type="stmt"/>
         <line num="89" count="0" type="stmt"/>
-        <line num="90" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="91" count="0" type="stmt"/>
+        <line num="90" count="0" type="stmt"/>
+        <line num="91" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="92" count="0" type="stmt"/>
         <line num="93" count="0" type="stmt"/>
-        <line num="96" count="0" type="stmt"/>
-        <line num="98" count="0" type="stmt"/>
+        <line num="94" count="0" type="stmt"/>
+        <line num="97" count="0" type="stmt"/>
         <line num="99" count="0" type="stmt"/>
-        <line num="101" count="0" type="stmt"/>
-        <line num="103" count="0" type="stmt"/>
-        <line num="110" count="0" type="stmt"/>
-        <line num="116" count="0" type="stmt"/>
-        <line num="118" count="0" type="stmt"/>
-        <line num="127" count="4" type="stmt"/>
-        <line num="128" count="3" type="cond" truecount="2" falsecount="2"/>
-        <line num="129" count="3" type="stmt"/>
-        <line num="132" count="0" type="stmt"/>
-        <line num="134" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="135" count="0" type="stmt"/>
+        <line num="100" count="0" type="stmt"/>
+        <line num="102" count="0" type="stmt"/>
+        <line num="104" count="0" type="stmt"/>
+        <line num="115" count="0" type="stmt"/>
+        <line num="117" count="0" type="stmt"/>
+        <line num="126" count="4" type="stmt"/>
+        <line num="127" count="3" type="cond" truecount="2" falsecount="2"/>
+        <line num="128" count="3" type="stmt"/>
+        <line num="131" count="0" type="stmt"/>
+        <line num="134" count="0" type="stmt"/>
+        <line num="136" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="137" count="0" type="stmt"/>
         <line num="138" count="0" type="stmt"/>
         <line num="141" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="142" count="0" type="stmt"/>
-        <line num="145" count="0" type="stmt"/>
-        <line num="148" count="0" type="stmt"/>
-        <line num="154" count="4" type="stmt"/>
+        <line num="143" count="0" type="stmt"/>
+        <line num="146" count="0" type="stmt"/>
+        <line num="152" count="4" type="stmt"/>
+        <line num="153" count="1" type="stmt"/>
+        <line num="154" count="1" type="stmt"/>
         <line num="155" count="1" type="stmt"/>
         <line num="156" count="1" type="stmt"/>
         <line num="157" count="1" type="stmt"/>
-        <line num="162" count="1" type="stmt"/>
-        <line num="163" count="1" type="stmt"/>
-        <line num="165" count="0" type="stmt"/>
-        <line num="172" count="4" type="stmt"/>
+        <line num="159" count="0" type="stmt"/>
+        <line num="166" count="4" type="stmt"/>
       </file>
     </package>
     <package name="Tabs.ImagesTab">
-      <metrics statements="9" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="1"/>
+      <metrics statements="7" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="1"/>
       <file name="ImagesTab.style.ts" path="D:\source\Globant\src\Tabs\ImagesTab\ImagesTab.style.ts">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="3" count="1" type="stmt"/>
       </file>
       <file name="ImagesTab.tsx" path="D:\source\Globant\src\Tabs\ImagesTab\ImagesTab.tsx">
-        <metrics statements="8" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="1"/>
-        <line num="12" count="1" type="stmt"/>
+        <metrics statements="6" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="1"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="2" type="cond" truecount="2" falsecount="0"/>
         <line num="13" count="2" type="stmt"/>
-        <line num="14" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="16" count="2" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="20" count="2" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="28" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
       </file>
     </package>
     <package name="Tabs.SheetsTab">
-      <metrics statements="9" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="1"/>
-      <file name="SheetsTab.style.ts" path="D:\source\Globant\src\Tabs\SheetsTab\SheetsTab.style.ts">
-        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="3" count="1" type="stmt"/>
-      </file>
+      <metrics statements="6" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="1"/>
       <file name="SheetsTab.tsx" path="D:\source\Globant\src\Tabs\SheetsTab\SheetsTab.tsx">
-        <metrics statements="8" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="1"/>
-        <line num="12" count="1" type="stmt"/>
-        <line num="13" count="2" type="stmt"/>
-        <line num="14" count="2" type="cond" truecount="2" falsecount="0"/>
+        <metrics statements="6" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="1"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="10" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
         <line num="16" count="2" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="20" count="2" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
-        <line num="31" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.Gallery">
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <file name="Gallery.style.ts" path="D:\source\Globant\src\components\Gallery\Gallery.style.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="2" type="stmt"/>
+      </file>
+      <file name="Gallery.tsx" path="D:\source\Globant\src\components\Gallery\Gallery.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="4" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
       </file>
     </package>
     <package name="components.Layer">
@@ -115,8 +121,22 @@
         <line num="20" count="10" type="stmt"/>
       </file>
     </package>
+    <package name="components.SheetGrid">
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <file name="SheetGrid.style.ts" path="D:\source\Globant\src\components\SheetGrid\SheetGrid.style.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="2" type="stmt"/>
+      </file>
+      <file name="SheetGrid.tsx" path="D:\source\Globant\src\components\SheetGrid\SheetGrid.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="4" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
+        <line num="21" count="2" type="stmt"/>
+      </file>
+    </package>
     <package name="consts">
-      <metrics statements="15" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <metrics statements="16" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="keyboard.ts" path="D:\source\Globant\src\consts\keyboard.ts">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="4" count="4" type="stmt"/>
@@ -127,19 +147,20 @@
         <line num="5" count="4" type="stmt"/>
       </file>
       <file name="storage.ts" path="D:\source\Globant\src\consts\storage.ts">
-        <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="3" type="stmt"/>
-        <line num="15" count="3" type="stmt"/>
-        <line num="24" count="3" type="stmt"/>
-        <line num="26" count="3" type="stmt"/>
+        <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
         <line num="27" count="3" type="stmt"/>
         <line num="29" count="3" type="stmt"/>
         <line num="30" count="3" type="stmt"/>
         <line num="32" count="3" type="stmt"/>
-        <line num="34" count="3" type="stmt"/>
-        <line num="35" count="3" type="stmt"/>
-        <line num="37" count="3" type="stmt"/>
+        <line num="38" count="3" type="stmt"/>
         <line num="39" count="3" type="stmt"/>
+        <line num="41" count="3" type="stmt"/>
+        <line num="43" count="3" type="stmt"/>
+        <line num="44" count="3" type="stmt"/>
+        <line num="46" count="3" type="stmt"/>
+        <line num="48" count="3" type="stmt"/>
       </file>
     </package>
     <package name="utils">
